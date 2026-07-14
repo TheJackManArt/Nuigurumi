@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leer Cómic - Capítulo 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div class="lector-barra">
+  <a href="index.html">&larr; Volver</a>
+
+  <select id="selector-capitulo" onchange="if(this.value) window.location.href=this.value;">
+    <option value="leer-cap1.html">Capítulo 1</option>
+    <option value="leer-cap2.html" selected>Capítulo 2</option>
+    <!-- Cuando tengas más capítulos, agrega opciones aquí, ej: -->
+    <!-- <option value="leer-cap3.html">Capítulo 3</option> -->
+  </select>
+
+  <a href="personajes.html">Personajes</a>
+</div>
+
+<!--
+  INSTRUCCIONES:
+  Agrega aquí una <img> por cada página del capítulo 2, en orden.
+  Reemplaza "Multimedia/comic/cap2-pagXX.png" por el nombre real de tus archivos
+  (sugiero nombrarlos con el capítulo incluido, ej: cap2-pag01.png, para no
+  confundirlos con las imágenes del capítulo 1 en la misma carpeta).
+-->
+<div class="paginas-comic">
+  <img src="Multimedia/comic/cap2-pag01.png" alt="Página 1">
+  <img src="Multimedia/comic/cap2-pag02.png" alt="Página 2">
+  <!-- Agrega el resto de páginas del capítulo 2 aquí -->
+</div>
+
+<div class="fin-capitulo">
+  <p>Fin del Capítulo 2</p>
+  <a href="index.html">Volver al inicio del cómic</a>
+</div>
+
+</body>
+</html>
