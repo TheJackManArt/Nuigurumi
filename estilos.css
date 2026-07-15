@@ -610,7 +610,7 @@ main.sobre-mi p {
 .personaje-card img {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
   margin-bottom: 10px;
 }
