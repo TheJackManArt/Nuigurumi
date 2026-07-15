@@ -572,3 +572,130 @@ main.sobre-mi p {
 @media (max-width: 600px) {
   .galeria-grid { columns: 1 100%; }
 }
+
+.rol {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #d9714e;
+  text-transform: uppercase;
+  margin: 4px 0 8px;
+}
+
+/* Rejilla de tarjetas de personajes */
+.personajes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.personaje-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 18px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.personaje-card:hover {
+  transform: translateY(-4px);
+}
+
+.personaje-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.personaje-card h3 {
+  font-family: 'Lilita One', cursive;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #d9714e;
+}
+
+/* Ficha de personaje (oculta hasta que su #ancla está activa) */
+.personaje-detalle {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.personaje-detalle:target {
+  display: flex;
+}
+
+.detalle-contenido {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  gap: 24px;
+}
+
+.detalle-contenido img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.detalle-texto h2 {
+  font-family: 'Lilita One', cursive;
+  color: #d9714e;
+  margin: 0 0 4px;
+}
+
+.detalle-texto h4 {
+  margin: 14px 0 4px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.detalle-texto p {
+  margin: 0;
+}
+
+.cerrar {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #999;
+  text-decoration: none;
+}
+
+.cerrar:hover {
+  color: #d9714e;
+}
+
+/* En pantallas angostas, la ficha se apila en vertical */
+@media (max-width: 600px) {
+  .detalle-contenido {
+    flex-direction: column;
+  }
+  .detalle-contenido img {
+    width: 100%;
+    height: auto;
+  }
+}
